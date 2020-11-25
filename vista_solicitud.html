@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1″ />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="css/solicitud.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="js/validarSolicitud.js"></script>
+
+<link rel="icon" type="image/png" href="imagenes/icono.png"/>
+
+</head>
+<body>
+<nav style="background-color: white;" class="navbar navbar-expand-md navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" style="font-size: 30px;" href="index.html"><img src="imagenes/logo-telcel.svg"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a style="color: blue; font-weight: bold;" class="nav-link" href="index.html"><i class="fa fa-home"></i> Inicio </a></i>
+                </li>
+                <li class="nav-item">
+                    <a style="color: blue; font-weight: bold; margin-left: 20px;" class="nav-link" href="vista_solicitud.html"><i class="fa fa-envelope "></i> Solicitud</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: blue; font-weight: bold; margin-left: 20px;" class="nav-link" href="#"><i class="fa fa-phone "></i> Contactanos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Solicitud del problema</h1>
+        <p class="lead text-muted mb-0">Favor de llenar todos los datos para poderte ayudar.</p>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Solicitud</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-primary text-white"><i class="fa fa-envelope"></i> FORMULARIO DE CONSULTA
+                </div>
+                <div class="card-body">
+
+
+                    <form action="include/solicitud.php" method="POST" name="formSolicitud" onsubmit="return validar();">
+
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Escribe tu nombre">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <label for="celular">Celular</label>
+                                <input type="text" class="form-control" id="celular" name="celular" aria-describedby="emailHelp" placeholder="Escribe tu número de celular">
+                                <small id="emailHelp" class="form-text text-muted">Favor de poner el celular registrado en la compañia.</small>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="company">Compañia</label>
+                                <input type="text" class="form-control" id="company" name="company" aria-describedby="emailHelp" placeholder="Escribe la compañia">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo</label>
+                            <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Escribe tu correo">
+                            <small id="emailHelp" class="form-text text-muted">No compartiremos tu correo con nadie.</small>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <label for="estado">Estado</label>
+                              <select id="estado" name="estado" class="form-control">
+                                <option selected>Seleccionar...</option>
+                                <option></option>
+                                <option>Aguascalientes</option>
+                                <option>Baja California</option>
+                                <option>Baja California Sur</option>
+                                <option>Campeche</option>
+                                <option>Chiapas</option>
+                                <option>Chihuahua</option>
+                                <option>Coahuila</option>
+                                <option>Colima</option>
+                                <option>Distrito Federal</option>
+                                <option>Durango</option>
+                                <option>Estado de México</option>
+                                <option>Guanajuato</option>
+                                <option>Guerrero</option>
+                                <option>Hidalgo</option>
+                                <option>Jalisco</option>
+                                <option>Michiacán</option>
+                                <option>Morelos</option>
+                                <option>Nayarit</option>
+                                <option>Nuevo León</option>
+                                <option>Oaxaca</option>
+                                <option>Puebla</option>
+                                <option>Querétaro</option>
+                                <option>Quintana Roo</option>
+                                <option>San Luis Potosí</option>
+                                <option>Sinaloa</option>
+                                <option>Sonora</option>
+                                <option>Tabasco</option>
+                                <option>Tamaulipas</option>
+                                <option>Tlaxcala</option>
+                                <option>Veracruz</option>
+                                <option>Yucatán</option>
+                                <option>Zacatecas</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group col-md-5">
+                              <label for="municipio">Municipio</label>
+                              <input type="text" placeholder="Escribe tu Municipio" class="form-control" id="municipio" name="municipio">
+                            </div>
+
+                            <div class="form-group col-md-3">
+                              <label for="postal">Codigo Postal</label>
+                              <input type="text" placeholder="Escribe tu C.P" class="form-control" id="postal" name="postal">
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje del problema</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="6"></textarea>
+                        </div>
+
+                        <div class="mx-auto">
+                        <input type="submit" class="btn btn-primary text-right" value="Enviar"></div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header bg-success text-white text-uppercase"><i class="fa fa-home"></i> Dirección</div>
+                <div class="card-body">
+                    <p>San nicolas de los garza</p>
+                    <p>64890</p>
+                    <p>Monterrey, Nuevo León</p>
+                    <p>Email : telcel@example.com</p>
+                    <p>Tel. +33 12 56 11 51 84</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<!-- Footer -->
+<footer class="text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-xl-3">
+                <h5>Nosotros</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <p class="mb-0">
+                   Somos una empresa mundial de servicio telefonico.
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h5>Información</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><a href="">Link 1</a></li>
+                    <li><a href="">Link 2</a></li>
+                    <li><a href="">Link 3</a></li>
+                    <li><a href="">Link 4</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+                <h5>Otros links</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><a href="">Link 1</a></li>
+                    <li><a href="">Link 2</a></li>
+                    <li><a href="">Link 3</a></li>
+                    <li><a href="">Link 4</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3">
+                <h5>Contacto</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-home mr-2"></i> Telcel</li>
+                    <li><i class="fa fa-envelope mr-2"></i> email@example.com</li>
+                    <li><i class="fa fa-phone mr-2"></i> + 33 12 14 15 16</li>
+                    <li><i class="fa fa-print mr-2"></i> + 33 12 14 15 16</li>
+                </ul>
+            </div>
+            <div class="col-12 copyright mt-3">
+                <p class="float-left">
+                    <a href="#">Ir hacia arriba</a>
+                </p>
+                <p class="text-right text-muted">copyright @David</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
